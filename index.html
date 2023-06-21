@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vue Todo</title>
+  </head>
+  <body>
+    <div
+      id="app"
+      class="bg-gradient-to-r from-orange-500 via-yellow-500 to-pink-500 h-[100vh] flex flex-col items-center justify-center"
+    >
+      <div class="flex flex-col gap-4 items-center">
+        <label for="goal" class="text-3xl font-bold text-blue-700">Add Your Daily Goals</label>
+        <div>
+          <input type="text" name="" id="goal" v-model="enteredVal" class="mr-3 p-2 rounded-md"/>
+          <button v-on:click="addGoals" class="bg-pink-600  text-white p-2 rounded-md">Add Goal</button>
+        </div>
+      </div>
+      <ul class="my-4 flex flex-col justify-center items-center">
+        <li v-for="goal in goals" class="list-style-none font-bold text-2xl">{{ goal }}</li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
