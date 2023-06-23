@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vue Todo</title>
+  </head>
+  <body>
+    <div
+      id="app"
+      class="bg-gradient-to-r from-orange-500 via-yellow-500 to-pink-500 h-[100vh] flex flex-col items-center justify-center"
+    >
+      
+      <!-- <h1>{{ myData ? "Hi my name is Nil" : "Hi my name is Ram" }}</h1> -->
+
+      <!-- or -->
+      
+      <h1 v-show="myData">Hi my name is Nil</h1>
+      <h1 v-show="!myData">Hi my name is Ram</h1>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
